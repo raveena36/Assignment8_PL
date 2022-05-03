@@ -1,21 +1,18 @@
-package assignmenttwo;
-
 public class PegPuzzle {
-	/*
-	  
-	      *        
+/*  
+	  *        
          * *   
         * * *  
        * * * * 
       * * * * *
 	 
-	        0
+	    0
            1 2 
           3 4 5
          6 7 8 9 
-      10 11 12 13 14     */
+      10 11 12 13 14      */
 	
-		private int[][] moves = { 
+private int[][] moves = { 
 			{0, 1, 3}, 
 			{0, 2, 5},
 			{1, 3, 6}, 
@@ -36,7 +33,7 @@ public class PegPuzzle {
 			{12, 13, 14}
 		};
 
-		static int[][] step = {
+static int[][] step = {
 			{3, 1, 0}, 
 			{5, 2, 0},
 			{6, 3, 1}, 
@@ -57,14 +54,13 @@ public class PegPuzzle {
 			{14, 13, 12}
 		};
 
-		public static int[] init(int i)
-		{
+public static int[] init(int i){
 			int[] pegholes = new int[15];
 			pegholes[i] = 0;
 			return(pegholes);
 		}
 
-		public static int[] move(int[] i, int from, int over, int to)
+public static int[] move(int[] i, int from, int over, int to)
 		{
 			int k =14 ;
 			int[] j = i;
@@ -83,8 +79,8 @@ public class PegPuzzle {
 			}
 			return(null);
 		}
-
-		public static int[][] solve(int[] kj)
+	
+public static int[][] solve(int[] kj)
 		{
 			int k = kj[0];
 			int j = kj[1];
@@ -115,8 +111,7 @@ public class PegPuzzle {
 
 			return(nextSoln);
 		}
-
-		public static int[][] puzzle(int i)
+public static int[][] puzzle(int i)
 		{
 			int[] kd = init(i);
 
@@ -145,7 +140,7 @@ public class PegPuzzle {
 			return(next);
 		}
 
-		public static void show(int[] kd)
+public static void show(int[] kd)
 		{
 			int k = kd[0];
 			int d = kd[1];
@@ -180,7 +175,7 @@ public class PegPuzzle {
 			System.out.print(' ');
 		}
 
-		public static void replay(int[] ms, int[] kd)
+public static void replay(int[] ms, int[] kd)
 		{
 			for(int iter = 0; iter < ms.length; iter++)
 			{
@@ -202,7 +197,7 @@ public class PegPuzzle {
 			show(kd);
 		}
 
-		public static void main(String[] args)
+public static void main(String[] args)
 		{	PegPuzzle puzzle = new PegPuzzle();
 			
 			for(int i = 0; i <= 5; i++)
@@ -217,6 +212,6 @@ public class PegPuzzle {
 			}
 
 		}
-	}
+}
 
 
